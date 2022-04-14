@@ -27,25 +27,17 @@ public class PhoneBookList {
 
  
     public void addNode(PhonebookData data) {
-       
         Node newNode = new Node(data);
 
       
         if (head == null) {
-          
             head = tail = newNode;
-            
             head.previous = null;
-      
             tail.next = null;
         } else {
-      
             tail.next = newNode;
-        
             newNode.previous = tail;
-            
             tail = newNode;
-       
             tail.next = null;
         }
     }
@@ -59,7 +51,6 @@ public class PhoneBookList {
         }
         System.out.println("Nodes of doubly linked list: ");
         while (current != null) {
-         
 
             System.out.println(current.data + " ");
             current = current.next;
